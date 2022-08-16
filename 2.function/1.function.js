@@ -11,7 +11,7 @@ let salute = function() { //펑션데이터를 왼쪽 salute에 쓰고있다.
 salute()
 console.log(salute)
 //js는 데이터타입x 변수명으로 구별하기
-let sayHello = function(user, greeting) {
+let sayHello = function(user, greeting) { //function expression
     return `${greeting}, ${user}` //template literal
 }
 
