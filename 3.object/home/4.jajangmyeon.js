@@ -1,21 +1,22 @@
 /* 과제:
 ~ 를 객체지향으로 refactoring 하라.
 */
-
-function chef1(food) {
-    this.food = `달콤한 ${food}.\n`
+function Food(taste, name){
+    this.taste = taste
+    this.name = name
 }
 
-function chef2(food) {
-    this.food = `매운 ${food}.\n`
+function Chef(taste) { //foodname 파라미터로받음
+    this.cook = foodName => new Food(taste, foodName)
 }
 
-function waiter(food, chef) {
-    this.food = console.log(chef)
+function Waiter() {
+    this.order = (foodName, chef) => chef.cook(foodName)
 }
 
-const chef1 = new chef1(food)
-const chef2 = new chef2(food)
-const waiter = new waiter(food, chef)
+let chef1 = new Chef('달콤한')
+let chef2 = new Chef('매운')
+let waiter = new Waiter()
 
-console.log(waiter.food(chef1.food('짜장면')))
+waiter.order('짜장면', chef1)
+waiter.ofder('짜장면', chef2)

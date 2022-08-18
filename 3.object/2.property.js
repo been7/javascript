@@ -20,7 +20,7 @@ console.log(Object.entries(user))
 
 
 //
-user = {
+user = { //과거 문법
     greet: function() {console.log('hello')}
 }
 
@@ -43,7 +43,7 @@ user.address = address
 address.street = 'sejong'
 console.log(user.address.street)
 //console.log(user.city.name) // TypeError: Cannot read properties of undefined (reading 'name')
-console.log(user.city?.name)
+console.log(user.city?.name) //udefined
 
 //
 let street

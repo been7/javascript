@@ -1,7 +1,7 @@
 function makeFn() {
     let name = 'parker'
 
-    function displayName() {
+    function displayName() { //closure
         console.log(name)
     }
 

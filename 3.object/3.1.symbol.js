@@ -1,5 +1,5 @@
 let id = Symbol()
-let id1 = Symbol('id')
+let id1 = Symbol('id') //파라미터는 디스크립션
 let id2 = Symbol('id')
 
 console.log(id, id1, id2)
@@ -26,13 +26,13 @@ for(let key in user) console.log(key) //symbol은 조회안됨?
 
 console.log(Object.keys(user)) //symbol 조회안됨
 
-//
+// global symbol registry
 id1 = Symbol.for('id')
 id2 = Symbol.for('id')
 console.log(id1 == id2)
 
 let key = Symbol.keyFor(id1)
-console.log(key, typeof key)
+console.log(key, typeof key) // ?
 
 //
 id1 = Symbol.for('name') // global symbol 만들기
