@@ -11,7 +11,8 @@ console.log(user.weight)
 console.log('height' in user)
 console.log('weight' in user)
 
-for(let key in user) console.log(user[key]) //이터레이팅?ㅋ
+for(let key in user)
+console.log(user[key]) //이터레이팅?ㅋ
 
 user.name = 'paker'
 console.log(Object.keys(user))

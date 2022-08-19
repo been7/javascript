@@ -6,7 +6,7 @@ sayHi('john')
 
 console.log(typeof sayHi)
 console.log(sayHi.name) //객체안에 기본으로 name이라는 속성이 있다. name 값은 function 이름
-console.log(sayHi.length) //length 기본속성.
+console.log(sayHi.length) //length 기본속성. 파라미터갯수
 
 //
 let user = {

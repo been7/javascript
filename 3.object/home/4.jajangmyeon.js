@@ -19,4 +19,4 @@ let chef2 = new Chef('매운')
 let waiter = new Waiter()
 
 waiter.order('짜장면', chef1)
-waiter.ofder('짜장면', chef2)
+waiter.order('짜장면', chef2)

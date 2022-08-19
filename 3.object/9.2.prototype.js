@@ -20,18 +20,14 @@ console.log(arr1.__proto__ == Array.prototype)
 console.log(Array.prototype.__proto__)
 console.log(Object.prototype)
 console.log(Array.prototype.__proto__ == Object.prototype)
-
-console.log(arr2) // [1, 2]
+console.log(arr2.toString())
 
 //
 let one = new Number(1)
 console.log(one.toString()) // Number(1)
 
 //
-function User() {
-
-}
-
+function User() {}
 let user = new User() //얘는 기본toString 없어서,,
 console.log(user.toString()) // [object Object]
 console.log(obj.toString()) // [object Object]

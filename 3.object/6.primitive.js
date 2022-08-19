@@ -9,7 +9,7 @@ let user = {
     [Symbol.toPrimitive](hint) {//괄호안쓰면 그냥 스트링타입. 그냥 키 이름일 뿐. 변수hint는 데이터타입없다.
         return hint == 'string' ?  this.name : this.age
     }
-}
+} //[Symbol.toPrimitive] : 기본타입으로 바꿔야 할 때.
 
 let user2 = {
     age: 38,
@@ -32,13 +32,13 @@ user = { //이렇게 써도 new object이 실행된다.
     }
 }
 
-console.log(user + '')
+console.log(user + '') // ??
 
 
-user.valueOf = function() {
+user.valueOf = function() { //toString이 없으면 valueOf 콜.
     return this.age
 }
-console.log(user + 100)
+console.log(user + 100) // ??
 
 //
 userStr = JSON.stringify(user) //결국 이거 쓸거다.

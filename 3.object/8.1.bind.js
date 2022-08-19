@@ -7,7 +7,7 @@ let user = {
 
 user.greet()
 
-//
+//greet펑션이 어디 등록되는것.
 setTimeout(user.greet, 100) //greet함수가져올때 주어객체가없어서 undefined
 
 let fn = user.greet
