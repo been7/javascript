@@ -87,3 +87,5 @@ for(let i = 0; i < arr.length; i++)
 
     // 과제: 원소를 출력하라.
 for(let key in arr) console.log(arr[key])
+
+for(let val of arr) console.log(val)
