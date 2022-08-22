@@ -41,7 +41,7 @@ let user = {
     name: 'user'
 }
 
-let administrator = {
+let administrator = { //A is a B. admini is a user
     __proto__: user
 }
 

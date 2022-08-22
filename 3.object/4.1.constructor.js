@@ -22,7 +22,7 @@ function User(name) { //생성자(대문자로 시작) 콜할 때 new 붙여야�
     return this // 얘도 생략. 직접사용O
 }
 
-let user1 = User('bob') // undefined.
+let user1 = User('bob') // undefined. 얘만있으면 19 실행x new안해서..
 user1 = new User('bob') // User {name: 'bob', greet: ƒ}
 console.log(user1)
 
@@ -37,7 +37,7 @@ let str = String(1)
 console.log(typeof str) //string 타입
 
 str = new String(1)
-console.log(typeof str) //object 타입
+console.log(typeof str) //object 타입 생성자로 만들어서.
 
 //
 let human = new function() {

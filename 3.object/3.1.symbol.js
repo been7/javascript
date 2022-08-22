@@ -28,15 +28,15 @@ console.log(Object.keys(user)) //symbol 조회안됨
 
 // global symbol registry
 id1 = Symbol.for('id')
-id2 = Symbol.for('id')
+id2 = Symbol.for('id') //symbol.for 은 같은거 만들기.
 console.log(id1 == id2)
 
 let key = Symbol.keyFor(id1)
 console.log(key, typeof key) // ?
 
 //
-id1 = Symbol.for('name') // global symbol 만들기
-id2 = Symbol('name') // local symbol
+id1 = Symbol.for('name') // global symbol 만들기, key의 역할
+id2 = Symbol('name') // local symbol, 디스크립션역할,, 조회X
 console.log(id1 == id2)
 
 console.log(Symbol.keyFor(id1), Symbol.keyFor(id2))

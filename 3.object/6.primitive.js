@@ -20,7 +20,7 @@ let user2 = {
 
 console.log(`${user}`) //스트링타입
 console.log(user > user2)
-console.log(user + 50)
+console.log(user + 50) //+면 합치기인지 더하기인지 몰라서 hint가 디폴트
 console.log(user2 + 50)
 
 //
@@ -44,3 +44,6 @@ console.log(user + 100) // ??
 userStr = JSON.stringify(user) //결국 이거 쓸거다.
 console.log(userStr)
 console.log(typeof userStr)
+
+//     serializing : 객체를 기본타입으로 바꾸는 작업
+// <-> deserializing

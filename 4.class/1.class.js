@@ -3,7 +3,7 @@ class User { // sugar syntax
         this.name = name
     }
 
-    introduce() {
+    introduce() { //속성값이 펑션인 메소드?
         console.log(`I am ${this.name}.`)
     }
 }
@@ -12,9 +12,12 @@ let user = new User('john')
 console.log(user.name)
 user.introduce()
 
+// ][isClassConstructor]]: true
+// User('john') // TypeError: Class construtor User cannot be invoked without 'new'
+
 //
 User = class {
-    name //멤버변수
+    name // class field, 멤버변수
     age
 
     constructor(name, age) {
@@ -27,7 +30,10 @@ User = class {
     }
 }
 
-new User('abel', 12).introduce()
+user = new User('abel', 12)
+user.introduce() // abel / 12
+console.log(user.name) // abel
+console.log(User.prototype.name) //undefined
 
 //
 function makeClass(phrase) {

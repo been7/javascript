@@ -1,59 +1,49 @@
 class Animal {
     constructor(name) {
-        this.name = name
+        this.name = name //this.객체에 name 존재.
     }
 
     run(speed) {
-        this.speed = speed
-        console.log(this.name, this.speed, ' run.')
+        this.speed = speed //객체속성으로 speed 집어넣음 this.객체에 speed 존재
+        console.log(this.name, this.speed, 'run.')
     }
 
     stop() {
         this.speed = 0
-        console.log(this.name, ' stop.')
+        console.log(this.name, 'stop.')
     }
 }
 
-let animal = new Animal('animal') //constructor 부분으로 생각.
-console.log(animal)
+let animal = new Animal('animal')
+console.log(animal) // Animal {name: 'animal'}
 
-animal.run(10)
-console.log(animal)
+animal.run(10) // animal 10 run.
+console.log(animal) // Animal {name: 'animal', speed: 10}
+
 animal.stop()
-console.log(animal)
+console.log(animal) // Animal {name: 'animal', speed: 0}
 
 //
-class Duck extends Animal {
-    run(speed) { //constructor 안쓰면 파라미터없는 기본생성자 자동생성.
-        this.speed = speed / 10
-        console.log(this.name, this.speed, 'run.')
+class Rabbit extends Animal{
+    /*
+    constructor(...args) {
+        super(...args) // 자식생성자 첫번째 호출문은 super생성자?
     }
-
+    */
     hide() {
         console.log(this.name, 'hide.')
     }
 }
 
-let duck = new Duck('duck') //파라미터없는걸로 만들었는데..파라미터 넣어도 됨 왜냐 상속받은 Animal에 constructor name 있어서..
-console.log(duck)
+let rabbit = new Rabbit()
+console.log(rabbit)
 
-duck.run(10)
-duck.stop()
-duck.hide()
+rabbit = new Rabbit('rabbit')
+console.log(rabbit)
 
-//
-class Rabbit extends Animal {
-    stop() {
-        super.stop()
-        this.hide()
-    }
-
-    hide() {
-        console.log(this.name, 'hide.')
-    }
-}
-
-new Rabbit('rabbit').stop()
+console.log(rabbit.name)
+rabbit.run(100)
+rabbit.hide()
 
 //
 Rabbit = class extends Animal {
@@ -61,6 +51,16 @@ Rabbit = class extends Animal {
         super(name)
         this.color = color
     }
+
+    stop() {
+        super.stop()
+        this.hide()
+    }
+
+    hide() {
+        console.log(this.name, this.color, 'hide.')
+    }
 }
 
-console.log(new Rabbit('rabbit', 'black'))
+rabbit = new Rabbit('rabbit', 'black')
+rabbit.stop()
