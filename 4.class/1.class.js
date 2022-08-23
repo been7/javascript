@@ -33,7 +33,7 @@ User = class {
 user = new User('abel', 12)
 user.introduce() // abel / 12
 console.log(user.name) // abel
-console.log(User.prototype.name) //undefined
+console.log(User.prototype.name) //undefined 왜??
 
 //
 function makeClass(phrase) {

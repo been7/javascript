@@ -44,7 +44,7 @@ console.log(CoffeeMachine.prototype) // {constructor: ƒ, waterAmount: <accessor
 machine = new CoffeeMachine()
 console.log(machine) // CoffeeMachine {_waterAmount: undefined}
 
-machine.waterAmount = 1
+machine.waterAmount = 1 // ??
 console.log(machine) // CoffeeMachine {_waterAmount: 2}. set씀
 console.log(machine.waterAmount) // 102. get이용함.
 

@@ -59,5 +59,5 @@ articles.sort(Article.compare)
 console.log(articles)
 
 Article.compare = (a, b) => b - a
-articles.sort(Article.compare) //정렬할 때 sort 이용..
+articles.sort(Article.compare) //정렬할 때 sort 이용.., 내림차순,
 console.log(articles)
