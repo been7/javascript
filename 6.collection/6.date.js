@@ -1,7 +1,7 @@
 console.log(Date())
 console.log(typeof Date()) // string
 
-let date = new Date()
+let date = new Date() //오브젝 쓰고싶다.
 console.log(date)
 console.log(typeof date) // object
 console.log(date.toLocaleDateString()) // 년월일
@@ -31,5 +31,5 @@ console.log(date)
 date = new Date(1000 * 60 * 60 * 24) // 하루(24시간), 1000ms
 console.log(date)
 
-date = new Date(-1000 * 60 * 60 * 24)
+date = new Date(-1000 * 60 * 60 * 24) // 하루 전.
 console.log(date)

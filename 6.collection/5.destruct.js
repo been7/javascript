@@ -1,5 +1,5 @@
 let arr = ['ilya', 'kantor']
-let [name, surname] = arr
+let [name, surname] = arr //배열x 배열형태일 뿐
 console.log(name, surname)
 
 let [one, two] = [1, 2, 3]

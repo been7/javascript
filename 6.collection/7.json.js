@@ -22,7 +22,7 @@ user = {
     },
     [Symbol('id')]: 123,
     color: undefined // null이면 나옴.
-} //symbol, undefined
+} //메소드,symbol, undefined 무시됨.
 
 console.log(JSON.stringify(user))
 
@@ -31,7 +31,7 @@ let room = {
     number: 23
 }
 
-let meetup = {
+let meetup = { //객체안의 객체까지 신경써서 시리얼라이징 됨.
     title: 'conference',
     room
 }
